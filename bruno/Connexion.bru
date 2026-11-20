@@ -1,0 +1,29 @@
+meta {
+  name: Connexion
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/auth/login
+  body: json
+  auth: none
+}
+
+headers {
+  Accept: application/json
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "email": "candidat@example.com",
+    "password": "motdepasse123"
+  }
+}
+
+script:post-response {
+  if (res.status === 200) {
+    bru.setEnvVar("token", res.body.data.token)
+  }
+}

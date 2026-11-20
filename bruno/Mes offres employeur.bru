@@ -1,0 +1,16 @@
+meta {
+  name: Mes offres employeur
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/employer/offers
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: application/json
+  Authorization: Bearer {{token}}
+}

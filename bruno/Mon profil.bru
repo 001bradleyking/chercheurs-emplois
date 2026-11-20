@@ -1,0 +1,16 @@
+meta {
+  name: Mon profil
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/auth/me
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: application/json
+  Authorization: Bearer {{token}}
+}

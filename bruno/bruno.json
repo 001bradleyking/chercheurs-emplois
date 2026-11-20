@@ -1,0 +1,6 @@
+{
+  "version": "1",
+  "name": "Chercheurs d'Emplois",
+  "type": "collection",
+  "ignore": ["node_modules", "dist"]
+}

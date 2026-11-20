@@ -1,0 +1,28 @@
+meta {
+  name: Publier une offre
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{baseUrl}}/employer/offers
+  body: json
+  auth: none
+}
+
+headers {
+  Accept: application/json
+  Authorization: Bearer {{token}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "titre": "Développeur Laravel",
+    "description": "Concevoir et maintenir des API web.",
+    "localisation": "Cotonou, Bénin",
+    "contrat": "CDI",
+    "missions": ["Développer des API REST"],
+    "profil": ["Maîtrise de Laravel"]
+  }
+}

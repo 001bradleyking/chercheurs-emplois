@@ -1,0 +1,25 @@
+meta {
+  name: Inscription candidat
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/auth/register
+  body: json
+  auth: none
+}
+
+headers {
+  Accept: application/json
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "Candidat de démonstration",
+    "email": "candidat@example.com",
+    "password": "motdepasse123",
+    "role": "candidat"
+  }
+}
